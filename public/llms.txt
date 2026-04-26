@@ -1,0 +1,159 @@
+# Fördermatch.hh
+
+> Kostenloser Förder-Finder für Pre-Seed Startups in Hamburg, Deutschland.
+
+## Was ist Fördermatch.hh?
+
+Fördermatch.hh ist eine kostenlose Web-App, die Pre-Seed und Seed Startups in Hamburg hilft, passende öffentliche Förderprogramme zu finden. Nutzer:innen geben ein kurzes Startup-Profil ein (Branche, Phase, Teamgröße, gewünschte Förderart) und erhalten algorithmisch gematchte Förderempfehlungen, sortiert nach Match-Score.
+
+## Förderprogramme (16 Programme)
+
+### 1. InnoFounder
+- Anbieter: IFB Innovationsstarter Hamburg
+- Art: Zuschuss (nicht rückzahlbar)
+- Betrag: bis 75.000 € (2.500 €/Person/Monat, max. 18 Monate)
+- Phase: Vorgründung
+- Zielgruppe: Innovative Gründerteams in Hamburg
+- Alumni: Yook, PLAN3T, Wildplastic, DealCircle, Traceless Materials
+- Link: https://innovationsstarter.com/innofounder/
+
+### 2. InnoRampUp
+- Anbieter: IFB Innovationsstarter Hamburg
+- Art: Zuschuss (nicht rückzahlbar)
+- Betrag: bis 150.000 €
+- Phase: Pre-Seed / Seed
+- Zielgruppe: Technologiebasierte Startups in Hamburg
+- Alumni: apoQlar, Sympatient, Mindpeak, Nect, Vytal
+- Link: https://innovationsstarter.com/innorampup/
+
+### 3. EXIST Gründungsstipendium
+- Anbieter: BMWi / Hochschulen
+- Art: Stipendium
+- Betrag: bis 3.000 €/Monat (12 Monate)
+- Phase: Vorgründung (aus der Wissenschaft)
+- Zielgruppe: Gründer:innen aus Hochschulen und Forschungseinrichtungen
+- Alumni: ResearchGate, SoundCloud (frühe Phase), Ottobock Digital
+- Link: https://www.exist.de/
+
+### 4. InnoFinTech
+- Anbieter: IFB Innovationsstarter Hamburg
+- Art: Zuschuss
+- Betrag: bis 200.000 €
+- Phase: Pre-Seed / Seed
+- Zielgruppe: FinTech-Startups in Hamburg
+- Link: https://innovationsstarter.com/innofintech/
+
+### 5. Innovationsstarter Fonds Hamburg (IFH)
+- Anbieter: IFB Innovationsstarter Hamburg
+- Art: Beteiligung (Venture Capital)
+- Betrag: bis 1.500.000 €
+- Phase: Seed / Early Stage
+- Zielgruppe: Innovative Startups in Hamburg
+- Alumni: Ryzon, Statice, Lemoncat
+- Link: https://innovationsstarter.com/ifh/
+
+### 6. Hamburg-Kredit Mikro
+- Anbieter: IFB Hamburg
+- Art: Kredit
+- Betrag: bis 40.000 €
+- Phase: Gründung / Frühphase
+- Zielgruppe: Existenzgründer:innen und kleine Unternehmen in Hamburg
+- Link: https://www.ifbhh.de/foerderprogramm/hamburg-kredit-mikro
+
+### 7. Media Lift
+- Anbieter: nextMedia.Hamburg / Kreativgesellschaft
+- Art: Zuschuss + Mentoring
+- Betrag: 15.000 €
+- Phase: Ideenphase / Pre-Seed
+- Zielgruppe: Medien- und Content-Startups
+- Alumni: Steady, Podstars, Frames
+- Link: https://kreativgesellschaft.org/
+
+### 8. Games Lift Inkubator
+- Anbieter: Gamecity Hamburg
+- Art: Zuschuss + Mentoring
+- Betrag: 15.000 €
+- Phase: Ideenphase / Pre-Seed
+- Zielgruppe: Spieleentwickler:innen und Games-Startups
+- Alumni: Waza Games, Studio Fizbin
+- Link: https://gamecity-hamburg.de/
+
+### 9. AI.STARTUP.HUB Ideation
+- Anbieter: AI.STARTUP.HUB Hamburg
+- Art: Mentoring + Workspace
+- Betrag: kein direkter Zuschuss
+- Phase: Ideenphase
+- Zielgruppe: KI-basierte Startups
+- Link: https://www.aistartuphub.com/ideation-program/
+
+### 10. Next.Generation Inkubator
+- Anbieter: Körber-Stiftung / Social Impact
+- Art: Inkubator + Mentoring
+- Betrag: kein direkter Zuschuss (Sachleistungen)
+- Phase: Ideenphase
+- Zielgruppe: Social Entrepreneurs unter 30 Jahren
+- Link: https://koerber-stiftung.de/projekte/koerber-start-hub/
+
+### 11. EXIST Forschungstransfer
+- Anbieter: BMWi
+- Art: Zuschuss
+- Betrag: bis 250.000 € (Phase I) + bis 180.000 € (Phase II)
+- Phase: Forschung / Pre-Seed
+- Zielgruppe: Forschungsintensive Gründungen aus Hochschulen
+- Link: https://www.exist.de/
+
+### 12. Hamburg-Kredit Gründung und Nachfolge
+- Anbieter: IFB Hamburg
+- Art: Kredit
+- Betrag: bis 250.000 €
+- Phase: Gründung
+- Zielgruppe: Gründer:innen und Unternehmensnachfolger
+- Link: https://www.ifbhh.de/
+
+### 13. Hamburger Gründerpreis
+- Anbieter: Haspa / Partner
+- Art: Preisgeld + Netzwerk
+- Betrag: bis 10.000 €
+- Phase: Beliebig
+- Zielgruppe: Gründer:innen in Hamburg
+- Link: https://hamburger-gruenderpreis.de/
+
+### 14. beyourpilot Gründungsservice
+- Anbieter: Hamburger Hochschulen
+- Art: Beratung + Netzwerk
+- Betrag: kein direkter Zuschuss
+- Phase: Ideenphase / Pre-Seed
+- Zielgruppe: Studierende und Wissenschaftler:innen
+- Link: https://beyourpilot.de/
+
+### 15. EIC Accelerator Pilot
+- Anbieter: European Innovation Council
+- Art: Zuschuss + Beteiligung
+- Betrag: bis 2.500.000 € (Zuschuss) + bis 15 Mio. € (Beteiligung)
+- Phase: Seed / Growth
+- Zielgruppe: Deep-Tech und Impact-Startups in der EU
+- Link: https://eic.ec.europa.eu/
+
+### 16. Hamburger Exzellenz-Fellowship
+- Anbieter: Hamburg Innovation
+- Art: Fellowship / Stipendium
+- Betrag: individuell
+- Phase: Forschung / Pre-Seed
+- Zielgruppe: Forschende an Hamburger Hochschulen
+- Link: https://hamburginnovation.de/
+
+## Matching-Algorithmus
+
+Der Matching-Algorithmus bewertet anhand von vier Kriterien:
+- Gründungsphase (40% Gewichtung)
+- Branche/Industrie (20-30% Gewichtung)
+- Teamgröße (20% Gewichtung)
+- Gewünschte Förderart (10% Gewichtung)
+
+Ergebnisse werden nach Match-Score sortiert. Programme mit Score unter 30% werden nicht angezeigt.
+
+## Kontakt & Links
+
+- Website: https://grants-germany.pages.dev/
+- Sprachen: Deutsch, Englisch, Französisch, Spanisch
+- Kosten: Komplett kostenlos, keine versteckten Gebühren

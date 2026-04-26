@@ -79,6 +79,7 @@ const translations = {
       dataP: "Unsere Datenbank umfasst aktuell {count} Förderprogramme mit Fokus auf Hamburg. Wir aktualisieren die Informationen regelmäßig, empfehlen aber immer, die Details direkt beim Fördergeber zu prüfen.",
     },
     footer: "Kostenloser Förder-Finder für Hamburger Startups",
+    askAi: "Frag eine KI über uns",
   },
   en: {
     nav: { start: "Home", foerderungen: "Funding", about: "About", cta: "Find funding" },
@@ -157,6 +158,7 @@ const translations = {
       dataP: "Our database currently includes {count} funding programs focused on Hamburg. We update the information regularly but always recommend checking the details directly with the funding provider.",
     },
     footer: "Free funding finder for Hamburg startups",
+    askAi: "Ask AI about us",
   },
   fr: {
     nav: { start: "Accueil", foerderungen: "Financements", about: "À propos", cta: "Trouver un financement" },
@@ -235,6 +237,7 @@ const translations = {
       dataP: "Notre base de données comprend actuellement {count} programmes de financement axés sur Hambourg. Nous mettons régulièrement à jour les informations mais recommandons toujours de vérifier les détails directement auprès du financeur.",
     },
     footer: "Outil gratuit de recherche de financements pour les startups de Hambourg",
+    askAi: "Demandez à une IA à propos de nous",
   },
   es: {
     nav: { start: "Inicio", foerderungen: "Financiación", about: "Sobre nosotros", cta: "Buscar financiación" },
@@ -313,6 +316,7 @@ const translations = {
       dataP: "Nuestra base de datos incluye actualmente {count} programas de financiación enfocados en Hamburgo. Actualizamos la información regularmente pero siempre recomendamos verificar los detalles directamente con el financiador.",
     },
     footer: "Buscador gratuito de financiación para startups de Hamburgo",
+    askAi: "Pregúntale a una IA sobre nosotros",
   },
 };
 
@@ -1161,6 +1165,15 @@ const css = `
   .about h2{font-size:24px;font-weight:700;margin-bottom:16px;margin-top:48px;letter-spacing:-.5px}
   .about p{font-size:16px;color:var(--g600);line-height:1.8;margin-bottom:16px}
 
+  .ask-ai-section{border-top:1px solid var(--g200);padding:48px 24px;text-align:center}
+  .ask-ai-inner{max-width:800px;margin:0 auto}
+  .ask-ai-title{font-size:15px;font-weight:600;letter-spacing:-.3px;margin-bottom:8px;color:var(--g800)}
+  .ask-ai-sub{font-size:13px;color:var(--g400);margin-bottom:20px}
+  .ask-ai-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+  .ask-ai-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid var(--g200);border-radius:100px;font-size:13px;font-weight:500;color:var(--g700);background:var(--white);text-decoration:none;cursor:pointer;transition:all .2s ease}
+  .ask-ai-btn:hover{border-color:var(--g400);background:var(--g50);color:var(--black)}
+  .ask-ai-btn svg{width:16px;height:16px;flex-shrink:0}
+
   .footer{border-top:1px solid var(--g200);padding:48px 24px}
   .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
   .footer-text{font-size:13px;color:var(--g400)}
@@ -1445,6 +1458,32 @@ export default function App() {
           <h2>{t.about.dataTitle}</h2><p>{t.about.dataP.replace("{count}", foerderungen.length)}</p>
         </div></div>
       )}
+
+      {/* Ask AI Section */}
+      <section className="ask-ai-section">
+        <div className="ask-ai-inner">
+          <div className="ask-ai-title">{t.askAi}</div>
+          <div className="ask-ai-sub">{lang === "de" ? "Erfahre mehr über Fördermatch.hh über deine Lieblings-KI" : lang === "fr" ? "En savoir plus sur Fördermatch.hh via votre IA préférée" : lang === "es" ? "Aprende más sobre Fördermatch.hh con tu IA favorita" : "Learn more about Fördermatch.hh via your favorite AI"}</div>
+          <div className="ask-ai-btns">
+            <a className="ask-ai-btn" href={"https://chat.openai.com/?q=" + encodeURIComponent(lang === "de" ? "Was ist Fördermatch.hh? Welche Förderprogramme gibt es für Startups in Hamburg?" : lang === "fr" ? "Qu'est-ce que Fördermatch.hh ? Quels programmes de financement existent pour les startups à Hambourg ?" : lang === "es" ? "¿Qué es Fördermatch.hh? ¿Qué programas de financiación existen para startups en Hamburgo?" : "What is Fördermatch.hh? What funding programs exist for startups in Hamburg?")} target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg>
+              ChatGPT
+            </a>
+            <a className="ask-ai-btn" href={"https://www.perplexity.ai/?q=" + encodeURIComponent(lang === "de" ? "Was ist Fördermatch.hh? Welche Förderungen gibt es für Startups in Hamburg?" : lang === "fr" ? "Qu'est-ce que Fördermatch.hh ? Quels financements pour les startups à Hambourg ?" : lang === "es" ? "¿Qué es Fördermatch.hh? ¿Qué financiación hay para startups en Hamburgo?" : "What is Fördermatch.hh? What funding is available for startups in Hamburg?")} target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.923 2L12 6.41 17.077 2v5.056L22 11.742l-4.923.581v6.92L12 22l-5.077-2.757v-6.92L2 11.742l4.923-4.686V2zm1.23 5.258v3.534l-3.3 3.14 3.3.389v5.188L12 21.18l3.847-2.092v-5.267l3.3-.389-3.3-3.14V5.258L12 8.87 8.153 5.258z"/></svg>
+              Perplexity
+            </a>
+            <a className="ask-ai-btn" href={"https://grok.com/?q=" + encodeURIComponent(lang === "de" ? "Was ist Fördermatch.hh und welche Förderprogramme gibt es für Startups in Hamburg?" : lang === "fr" ? "Qu'est-ce que Fördermatch.hh et les programmes de financement pour startups à Hambourg ?" : lang === "es" ? "¿Qué es Fördermatch.hh y qué programas de financiación hay para startups en Hamburgo?" : "What is Fördermatch.hh and what funding programs exist for startups in Hamburg?")} target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.04 9.49l5.14-5.14h3.01L4.34 10.2a1.89 1.89 0 000 2.67l7.94 7.94-1.51 1.51L2.04 13.6a2.9 2.9 0 010-4.1zm6.1-6.65h3.01l10.81 10.82a2.9 2.9 0 010 4.1l-5.14 5.14h-3.01l5.85-5.85a1.89 1.89 0 000-2.67L8.14 2.84z"/></svg>
+              Grok
+            </a>
+            <a className="ask-ai-btn" href={"https://claude.ai/new?q=" + encodeURIComponent(lang === "de" ? "Was ist Fördermatch.hh? Erzähl mir über Förderprogramme für Startups in Hamburg." : lang === "fr" ? "Qu'est-ce que Fördermatch.hh ? Parle-moi des programmes de financement pour startups à Hambourg." : lang === "es" ? "¿Qué es Fördermatch.hh? Háblame de los programas de financiación para startups en Hamburgo." : "What is Fördermatch.hh? Tell me about funding programs for startups in Hamburg.")} target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.709 15.955l4.71-10.96a1.334 1.334 0 012.424 0l4.71 10.96c.156.363.09.67-.197.92-.287.25-.615.3-.983.147L12 15.313l-3.373 1.71c-.368.152-.696.102-.983-.148-.287-.25-.353-.557-.197-.92h.262zm7.71-2.736L12 12.96l-.419.259L8.94 14.8l2.772-6.45a.324.324 0 01.576 0l2.773 6.45-2.642-1.581zm7.163 5.673a.897.897 0 01-.66.266.897.897 0 01-.66-.266.897.897 0 01-.266-.66c0-.263.089-.485.266-.661a.897.897 0 01.66-.266c.262 0 .484.088.66.266a.897.897 0 01.266.66.897.897 0 01-.266.661z"/></svg>
+              Claude
+            </a>
+          </div>
+        </div>
+      </section>
 
       <footer className="footer"><div className="footer-inner">
         <div className="footer-text">Fördermatch.hh — {t.footer}</div>
